@@ -1,0 +1,5 @@
+# MacOS crap
+.DS_Store
+
+# Package manager stuff
+node_modules
