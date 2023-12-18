@@ -6,8 +6,8 @@
   signingkey = ~/.ssh/thiph.pub
   name = Thiph
   email = me@thiph.dev
-[includeIf "gitdir:~/Dev/"]
-  path = ~/Dev/.gitconfig
+[includeIf "gitdir:~/Work/"]
+  path = ~/Work/.gitconfig
 [gpg]
   format = ssh
 [commit]
