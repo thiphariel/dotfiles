@@ -29,8 +29,16 @@ source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
-# fnm
-eval "$(fnm env --use-on-cd)"
+if [[ $(uname) == "Linux" ]]; then
+  # Activate python3 venv
+  source ~/.venv/bin/activate
+  # fnm
+  export PATH="$HOME/.local/share/fnm:$PATH"
+  eval "`fnm env`"
+elif [[ $(uname) == "Darwin" ]]; then
+  # fnm
+  eval "$(fnm env --use-on-cd)"
+fi
 
 # You may need to manually set your language environment
 export LANG=en_GB.UTF-8
@@ -42,7 +50,7 @@ else
   export EDITOR="nvim"
 fi
 
-# Basic aliases 
+# Basic aliases
 alias ec="$EDITOR $HOME/.zshrc"
 alias sc="source $HOME/.zshrc"
 alias vim=nvim
@@ -64,4 +72,3 @@ fi
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-
