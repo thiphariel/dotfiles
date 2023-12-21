@@ -3,7 +3,7 @@
   editor = nvim
   ignorecase = false
 [user]
-  signingkey = ~/.ssh/thiph.pub
+  signingkey = ~/.ssh/thiph
   name = Thiph
   email = me@thiph.dev
 [includeIf "gitdir:~/Work/"]

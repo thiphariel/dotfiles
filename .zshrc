@@ -18,6 +18,12 @@ else
   ZSH_THEME="powerlevel10k/powerlevel10k"
 fi
 
+# Syntax highlighting theme
+source $HOME/.config/zsh/catppuccin_mocha-syntax-highlighting.zsh
+
+# Bat theme
+export BAT_THEME="catppuccin-mocha"
+
 # Which plugins would you like to load?
 # Standard plugins can be found in $ZSH/plugins/
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
@@ -35,10 +41,13 @@ if [[ $(uname) == "Linux" ]]; then
   # fnm
   export PATH="$HOME/.local/share/fnm:$PATH"
   eval "`fnm env`"
-elif [[ $(uname) == "Darwin" ]]; then
-  # fnm
-  eval "$(fnm env --use-on-cd)"
 fi
+
+# fnm
+eval "$(fnm env --use-on-cd)"
+
+# Rust
+source "$HOME/.cargo/env"
 
 # You may need to manually set your language environment
 export LANG=en_GB.UTF-8
@@ -53,6 +62,7 @@ fi
 # Basic aliases
 alias ec="$EDITOR $HOME/.zshrc"
 alias sc="source $HOME/.zshrc"
+alias et="$EDITOR $HOME/.config/tmux/tmux.conf"
 alias vim=nvim
 alias python=python3
 alias g=git

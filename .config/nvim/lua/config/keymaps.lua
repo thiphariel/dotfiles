@@ -2,9 +2,6 @@
 -- Default keymaps that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/keymaps.lua
 -- Add any additional keymaps here
 
-local discipline = require("thiphariel.discipline")
-discipline.cowboy()
-
 local keymap = vim.keymap
 local opts = { noremap = true, silent = true }
 
@@ -45,4 +42,7 @@ keymap.set("n", "<C-w><down>", "<C-w>-")
 -- Diagnostics
 keymap.set("n", "<C-j>", function()
   vim.diagnostic.goto_next()
+end)
+keymap.set("n", "<C-k>", function()
+  vim.diagnostic.goto_prev()
 end)
