@@ -2,16 +2,16 @@
   excludesfile = ~/.gitignore
   editor = nvim
   ignorecase = false
+[gpg]
+	format = ssh
+[commit]
+  gpgsign = true
 [user]
-  signingkey = ~/.ssh/thiph
+  signingkey = ~/.ssh/thiph.pub
   name = Thiph
   email = me@thiph.dev
 [includeIf "gitdir:~/Work/"]
   path = ~/Work/.gitconfig
-[gpg]
-  format = ssh
-[commit]
-  gpgsign = true
 [pull]
   ff = only
 [init]
