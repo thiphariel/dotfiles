@@ -49,9 +49,6 @@ eval "$(fnm env --use-on-cd)"
 # Rust
 source "$HOME/.cargo/env"
 
-# You may need to manually set your language environment
-export LANG=en_GB.UTF-8
-
 # Preferred editor for local and remote sessions
 if [[ -n $SSH_CONNECTION ]]; then
   export EDITOR="vim"
@@ -70,7 +67,6 @@ alias lg=lazygit
 
 # Dotfiles
 alias dfl="g --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
-alias dflp="g --git-dir=$HOME/.dotfiles-private/ --work-tree=$HOME"
 
 # Private aliases
 source $HOME/.personal.aliases
